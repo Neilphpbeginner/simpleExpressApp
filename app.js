@@ -75,8 +75,7 @@ app.put("/api/updateProject/:id", (req, res) => {
 });
 
 //error thrown message
-app.use(function (err, req, res, next) {
-  console.log(err.stack);
+app.use((err, req, res, next) {
   res.status(500).send("Something broke!");
 });
 
